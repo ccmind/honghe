@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style-wang.css">
+
+	<link rel="stylesheet" type="text/css" href="test/jquery-html5-full-slider/css/style.css" media="screen"/>
+	<script type="text/javascript" src="test/jquery-html5-full-slider/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="test/jquery-html5-full-slider/js/jquery.banner.revolution.min.js"></script>
+	<script type="text/javascript" src="test/jquery-html5-full-slider/js/banner.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="logo"></div>
+		<div class="menu">
+			<ul>
+				<li><a href="view/consume.html">县区</a></li>
+				<li><a href="index2.html">游客</a></li>
+				<li><a href="index3.html">景区</a></li>
+				<li><a href="index5.html">经济</a></li>
+				<li><a class="active" href="index.html">首页</a></li>	
+			</ul>
+		</div>
+	</div>
+	<div style="position:absolute;right:0px;top:100px;z-index:800;">
+		<ul class="left-1">
+			<li class="left-2"><b>实时客流：</b></li>
+			<li class="left-3">1</li>
+			<li class="left-3">5</li>
+			<li class="left-3">0</li>
+			<li class="left-3">0</li>
+			<li class="left-3">0</li>
+			<li class="left-3">0</li>
+			<li class="left-4"><b>人次</b></li>
+		</ul>
+	</div>
+	<div id="wrapper" style="margin-top:98px;position:relative">
+
+		<div class="fullwidthbanner-container">
+			<div class="fullwidthbanner">
+
+				<ul>
+					<li data-transition="3dcurtain-horizontal"data-slotamount="15"data-masterspeed="300">
+						<img src="test/jquery-html5-full-slider/images/slides/b1.png"alt=""/>
+					</li>
+					<li data-transition="3dcurtain-vertical"data-slotamount="15"data-masterspeed="300"data-link="#">
+						<img src="test/jquery-html5-full-slider/images/slides/b2.png"alt=""/>
+					</li>
+					<li data-transition="papercut"data-slotamount="15"data-masterspeed="300"data-link="#">
+						<img src="test/jquery-html5-full-slider/images/slides/b3.png"alt=""/>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main_section" style="height:450px">
+		<div class="main_section_div">
+			<div style="height:5%;width:100%;">
+				<span class="main_title">经济</span>
+				<!-- <a href="">更多</a> -->
+				<hr/>
+			</div>
+			<div style="width:100%;height:95%;padding-top:50px;">
+				<div style="width:50%;float:left;">
+					<span class="main_chart_title">游客收入在GDP中的占比</span>
+					<div id="oneChart" style="margin:50px;margin-left:80px;width:70%;height: 300px;"></div>
+				</div>
+				<div style="width:50%;float:left">
+					<span class="main_chart_title">消费数据占比图</span>
+					<div id="twoChart" style="margin:50px;width:80%;height: 300px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main_section" style="height:1020px;">
+		<div class="main_section_div">
+			<div style="height:5%;width:100%;">
+				<span class="main_title">景区</span>
+				<!-- <a href="">更多</a> -->
+				<hr/>
+			</div>
+			<div style="width:100%;height:47%;padding-top:50px;background:#fafafa">
+				<div style="width:50%;float:left;">
+					<span class="main_chart_title">红河州景区搜索排名</span>
+					<div id ="relationship1" style="margin:50px;width:80%;height:400px;"></div>
+				</div>
+				<div style="width:50%;float:right">
+					<span class="main_chart_title">红河州景区收入排名</span>
+					<div id ="relationship2" style="margin:50px;width:80%;height:400px;"></div>
+				</div>
+			</div>
+			<div style="width:100%;height:47%;padding-top:50px;">
+				<div style="width:50%;float:left;">
+					<span class="main_chart_title">红河州接待完成率</span>
+					<div id ="threeChart4" style="margin:50px;width:70%;height:300px;"></div>
+				</div>
+				<div style="width:50%;float:left">
+					<span class="main_chart_title">旅游资源占比</span>
+					<div id ="fiveChart" style="margin:50px;width:80%;height:270px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main_section" style="height:1050px">
+		<div class="main_section_div">
+			<div style="height:5%;width:100%;">
+				<span class="main_title">游客</span>
+				<!-- <a href="">更多</a> -->
+				<hr/>
+			</div>
+			<div style="width:100%;height:47%;padding-top:50px;background:#fafafa">
+				<div style="width:50%;float:left;">
+					<span class="main_chart_title">客源地分布</span>
+					<div id ="sixChart" style="margin:50px;margin-left:20px;width:80%;height:400px;"></div>
+				</div>
+				<div style="width:50%;float:left">
+					<span class="main_chart_title">游客出行时间</span>
+					<div id ="youke_line_chart" style="margin:50px;width:80%;height:380px;"></div>
+					<div style="height:20px;widht:80%;"></div>
+				</div>
+			</div>
+			<div style="width:100%;height:47%;padding-top:50px;">
+				<div style="width:50%;float:left">
+					<span class="main_chart_title">游客性别比例</span>
+					<div id ="fiveChart2" style="margin:50px;margin-top:20px;width:70%;height:300px;"></div>
+				</div>
+				<div style="width:50%;float:left">
+					<span class="main_chart_title">游客年龄分布</span>
+					<div id ="sixChart2" style="margin:50px;margin-top:20px;width:80%;height:300px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <IFRAME id="tianqi8_wetherinfo"name="tianqi8_wetherinfo"src="http://www.uuuu.cc/weather/code/freeweather1.htm?id=101010100&fcolor=&imgurl=tb/tbb/tb1&bimg=&bcolor=&fsize="frameBorder=0 width=100% height=200px ALIGN=CENTER MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 SCROLLING=NO allowtransparency=true></IFRAME> -->
+
+	<div class="footer">
+		<p>COPYRIGHT © 2003-2016 中国红河 | ALL RIGHTS RESERVED 京ICP备05030735号 京公网安备</p>
+	</div>
+
+	<script type="text/javascript" src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/roma.js"></script>
+	<script type="text/javascript" src="js/index-wang.js"></script>
+	<script src="js/esl.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			initChart('map_chart');
+			showChart();
+			initLineChart();
+			initRelationChart();
+			showChart1();
+		}
+		)
+	</script>
+
+</body>
+</html>

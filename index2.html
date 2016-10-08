@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type"content="text/html;charset=utf-8">
+	<meta http-equiv="X-UA-Compatible"content="IE=edge,chrome=1">
+	<meta name="viewport"content="width=device-width, initial-scale=1"/>
+	<title>景区</title>
+	<link rel="stylesheet"type="text/css"href="css/normalize.css">
+	<link rel="stylesheet"href="css/style2.css">
+</head>
+<body>
+	<div class="header">
+		<div class="logo"></div>
+		<div class="menu">
+			<ul>
+				<li><a href="view/consume.html">县区</a></li>
+				<li><a class="active" href="index2.html">游客</a></li>
+				<li><a  href="index3.html">景区</a></li>
+				<li><a  href="index5.html">经济</a></li>
+				<li><a href="index.html">首页</a></li>	
+			</ul>
+		</div>
+	</div>
+	<div class="section">
+		<div class="first_title">
+			<div style="height:5%;width:100%;">
+				<span class="title_jingji">红河游客情况</span>
+				<hr/ style="border:none;border-bottom:1px solid #C00009;">
+			</div>
+		</div>
+
+		<div class="top">
+			<div class="top_left"id="top_left"></div>
+			<div class="top_right"id="top_right"></div>
+		</div>
+		<div class="middle">
+			<div class="middle_title"><em>游客分析</em></div>
+			<div class="select">
+				<div class="select_button">
+					<ul id="ull">
+						<li id="btn_first">
+							<span class="icon2"></span>
+							<i class="redicon2"></i>
+							行业分布
+							
+						</li>
+						<li id="btn_second">
+							<span class="icon1"></span>
+							<i class="redicon1"></i>
+							人生阶段
+						</li>
+						<li id="btn_third">
+							<span class="icon3"></span>
+							<i class="redicon3"></i>
+							旅游方式
+						</li>
+						<li id="btn_fourth">
+							<span class="icon4"></span>
+							<i class="redicon4"></i>
+							出行方式
+						</li>
+					</ul>
+				</div>
+				<div class="select_show" id="select_show">	
+					<div class="show_second"id="show_second"></div>
+					<div class="show_first"id="show_first"></div>
+					<div class="show_third"id="show_third"></div>
+					<div class="show_fourth" id="show_fourth" style="width:400px;height:400px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>COPYRIGHT © 2003-2016 中国红河 | ALL RIGHTS RESERVED 京ICP备05030735号 京公网安备</p>
+	</div>
+</body>
+<script type="text/javascript"src="js/jquery.min.js"></script>
+<script type="text/javascript"src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/roma.js"></script>
+<script src="js/index2.js"></script>
+<script>
+	$(function() {
+		initChart("top_left");
+		initChart("top_right");
+		initChart("show_first");
+		initChart("show_second");
+		initChart("show_third");
+		initChart("show_fourth");
+	}
+	)
+</script>
+
+</html>

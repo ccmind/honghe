@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>红河州</title>
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<!-- 图片滚动 -->
+	<link href="../test/jquery-image-her-scroll/css/goodteacher.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="header">
+		<div class="logo"></div>
+		<div class="menu">
+			<ul>
+				<li><a class="active" href="consume.html">县区</a></li>
+				<li><a href="../index2.html">游客</a></li>
+				<li><a href="../index3.html">景区</a></li>
+				<li><a href="../index5.html">经济</a></li>
+				<li><a href="../index.html">首页</a></li>	
+			</ul>
+		</div>
+	</div>
+	<div class="main_section1">
+		<img src="../images/map_honghe1.png" class="map" usemap="#maparea" hspace="100">
+		<map name="maparea">
+			<area shape="circle" coords="153,211,40" namex="shiping" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/>
+			<area shape="circle" coords="108,318,40" namex="honghe" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+			<area shape="circle" coords="97,391,40" namex="lvchun" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+			<area shape="circle" coords="225,234,40" namex="jianshui" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+			<area shape="circle" coords="211,347,40" namex="yuanyang" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+			<area shape="circle" coords="423,46,40" namex="luxi" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+			<area shape="circle" coords="356,96,40" namex="mile" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+			<area shape="circle" coords="313,211,40" namex="kaiyuan" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+			<area shape="circle" coords="293,292,40" namex="gejiu" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+			<area shape="circle" coords="355,281,40" namex="mengzi" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+			<area shape="circle" coords="310,422,40" namex="jinping" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+			<area shape="circle" coords="408,380,40" namex="pingbian" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+			<area shape="circle" coords="456,458,40" namex="hekou" onmouseover="showMapDiv(this)"  onmouseout="hideMapDiv(this)"/> 
+		</map>
+		<!-- <img src="images/map_shiping.png" style="position: absolute;left:40%;top:200px;"> -->
+		
+		<div id="mapContentDiv" class="mapContentDiv" style="right:200px;top:50px;">
+			<h4 style='text-align:center;'>蒙自美食Top5</h4>
+			<p>1.	过桥米线   120<br />
+2.	甜石榴    80<br />
+3.	年糕      56<br />
+4.	枇杷      43.8<br />
+5.	新安所蘸水卷粉     31.2<br />
+
+</p>
+		</div>
+		<div class="map_menu">
+			<ul>
+				<li class="active"><a onclick="switchMapMenu(this)" name="food" href="#">美食排行</a></li>
+				<li><a onclick="switchMapMenu(this)" name="hotel" href="#">酒店排行</a></li>
+				<li><a onclick="switchMapMenu(this)" name="car" href="#">租车排行</a></li>
+				<li><a onclick="switchMapMenu(this)" name="income" href="#">景区排行</a></li>
+				<li><a onclick="switchMapMenu(this)" name="play" href="#">娱乐排行</a></li>
+				<li><a onclick="switchMapMenu(this)" name="special" href="#">特产排行</a></li>
+			</ul>
+		</div>
+		<div id="map_chart" class="map_chart"></div>
+	</div>
+
+	<!-- <div class="chart_section">
+		<div class="twoChart">
+			<div class="one">
+				
+			</div>
+			<div class="two">
+				<h2>红河州介绍</h2>
+				<p style="text-align:left;padding:20px">
+					红河哈尼族彝族自治州位于中国云南省东南部，北连昆明，东接文山，西邻玉溪，南与越南社会主义共和国接壤，北回归线横贯东西。红河是云南省第四大经济体，经济总量和部分社会经济指标居全国30个少数民族自治州之首。<br />
+					<br />
+					红河州国土面积3.293万平方公里，下辖4市9县，总人口456.1万人（2012年），是一个多民族聚居的边疆少数民族自治州，有10个世居民族，有241万少数民族人口。<br />
+					<br />
+					红河州有滇南政治、经济、军事、文化中心蒙自，有世界锡都个旧，有国家历史文化名城建水；文献名邦石屏；有河口和金水河两个国家级口岸；有的锡文化、陶瓷文化和梯田文化。红河是云南经济社会和人文自然的缩影，是云南近代工业的发祥地，也是中国走向东盟的陆路通道和桥头堡。
+				</p>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- <div class="chart_section" style="height:500px">
+		<div class="threePic">
+			<div class="threeOfOne left">
+				<img onmouseover="picHide(this)" onmouseout="picshow(this)" src="../images/honghe_pic.jpg" style="width:380px;height:360px;">
+				<p style="width:380px;">
+					蒙自市位于云南省东南部，红河哈尼族彝自治州东部，总面积2228平方千米。蒙自区位优势突出，是我国西南内陆通向东南半岛地区的咽喉，居住着汉、彝、苗、壮、回等19种民族，蒙自市具有优越的自然环境，非常适宜多种农作物生长和现代特色农业深度开发。
+				</p>
+			</div>
+			<div class="threeOfOne center">
+				<img onmouseover="picHide(this)" onmouseout="picshow(this)" src="../images/honghe_pic.jpg" style="width:380px;height:360px;">
+				<p style="width:380px;">
+					蒙自市位于云南省东南部，红河哈尼族彝自治州东部，总面积2228平方千米。蒙自区位优势突出，是我国西南内陆通向东南半岛地区的咽喉，居住着汉、彝、苗、壮、回等19种民族，蒙自市具有优越的自然环境，非常适宜多种农作物生长和现代特色农业深度开发。
+				</p>
+			</div>
+			<div class="threeOfOne right">
+				<img onmouseover="picHide(this)" onmouseout="picshow(this)" src="../images/honghe_pic.jpg" style="width:380px;height:360px;">
+				<p style="width:380px;">
+					蒙自市位于云南省东南部，红河哈尼族彝自治州东部，总面积2228平方千米。蒙自区位优势突出，是我国西南内陆通向东南半岛地区的咽喉，居住着汉、彝、苗、壮、回等19种民族，蒙自市具有优越的自然环境，非常适宜多种农作物生长和现代特色农业深度开发。
+				</p>
+			</div>
+		</div>
+	</div> -->
+
+	;
+	<div class="scrollPic_section">
+		<div class="scrollPicDiv">
+			<div style="width:100%;height:10%;line-height:10%;font-size:35px;color:#c00009">
+				<p id="areaName">个旧</p>
+			</div>
+			<div  style="float:left;width:33.3%;height:90%; position:relative">
+				<div id="onepie" style="width:300px; height:300px;padding:0px 40px">
+				</div>
+				<div style="margin-top:-20px;margin-left:-15px;width:100%;text-align:center;height:20px; line-height:20px;"><img src="../images/jingdian.png" style="margin-right:10px;">景点数量：<span style="color:#c00009" id="jingdianCount">7个</span></div>
+			</div>
+			<div style="float:left;width:33.3%;height:90%;">
+				<div id="twopie" style="width:300px; height:300px;padding:0px 40px">
+				</div>
+				<!-- 	<p style="width:100%;text-align:center;margin-top: -20px;"><img src="../images/jingqu.png" style="margin-right:10px">AAAA级景区：<span style="color:#f59120" id="jingquCount">1个</span></p> -->
+
+				<div style="margin-top:-20px;margin-left:-15px;width:100%;text-align:center;height:20px; line-height:20px;"><img src="../images/jingqu.png" style="margin-right:10px;">AAAA级景区：<span style="color:#f59120" id="jingquCount">1个</span></div>
+			</div>
+			<div style="float:left;width:33.3%;height:90%;">
+				<div id="threepie" style="width:300px; height:300px;padding:0px 40px">
+				</div>
+				<!-- 	<p style="width:100%;text-align:center;margin-top: -20px;"><img src="../images/jingqushouru.png" style="margin-right:10px">景区收入：<span style="color:#8cc63e" id="shouru">345万元</span>同比</p> -->
+				<div style="margin-top:-20px;margin-left:-15px;width:100%;text-align:center;height:20px; line-height:20px;"><img src="../images/jingqushouru.png" style="margin-right:10px;">景区收入：<span style="color:#f59120" id="shouru">345万元</span>同比</div>
+			</div>
+		</div>
+	</div>
+	<div class="indexmaindiv" id="indexmaindiv" style="background:#fff;">
+		<div class="indexmaindiv1 clearfix" >
+			<div class="stylesgoleft" id="goleft" style="margin-left:5%"></div>
+			<div class="maindiv1 " id="maindiv1">
+				<ul id="count1">
+					<li>
+						<div name="mengzi" style="position: relative;" onclick="changeChart(this)">
+							<a><img width='261px' height='211px' src="../images/area_mengzi.png" style="cursor:pointer"></a>
+							<!-- <p style="width:100%;height:35px;line-height:35px;font-size:20px;background:rgba(0,0,0,0.6);position: absolute;bottom:0px;left:0px;text-align:center;color:#fff">
+								蒙自
+							</p> -->
+						</div>
+					</li>
+					<li>
+						<div name="gejiu" style="position: relative;"  onclick="changeChart(this)">
+							<a><img width='261px' height='211px' src="../images/area_gejiu.png" style="cursor:pointer"></a>
+						</div>
+					</li>
+					<li>
+						<div name="gejiu" style="position: relative;"  onclick="changeChart(this)">
+							<a><img width='261px' height='211px' src="../images/area_honghe.png" style="cursor:pointer"></a>
+						</div>
+					</li>
+					<li>
+						<div name="gejiu" style="position: relative;"  onclick="changeChart(this)">
+							<a><img width='261px' height='211px' src="../images/area_mile.png" style="cursor:pointer"></a>
+						</div>
+					</li>
+					<li>
+						<div name="gejiu" style="position: relative;"  onclick="changeChart(this)">
+							<a><img width='261px' height='211px' src="../images/area_yuanyang.png" style="cursor:pointer"></a>
+						</div>
+					</li>
+					<li>
+						<div name="gejiu" style="position: relative;"  onclick="changeChart(this)">
+							<a><img width='261px' height='211px' src="../images/area_gejiu.png" style="cursor:pointer"></a>
+						</div>
+					</li>
+					<li>
+						<div name="gejiu" style="position: relative;"  onclick="changeChart(this)">
+							<a><img width='261px' height='211px' src="../images/area_gejiu.png" style="cursor:pointer"></a>
+						</div>
+					</li>
+					<li>
+						<div name="gejiu" style="position: relative;"  onclick="changeChart(this)">
+							<a><img width='261px' height='211px' src="../images/area_gejiu.png" style="cursor:pointer"></a>
+						</div>
+					</li>
+					<li>
+						<div name="gejiu" style="position: relative;"  onclick="changeChart(this)">
+							<a><img width='261px' height='211px' src="../images/area_gejiu.png" style="cursor:pointer"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="stylesgoright" id="goright" style="margin-right:5%"></div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>COPYRIGHT © 2003-2016 中国红河 | ALL RIGHTS RESERVED 京ICP备05030735号 京公网安备</p>
+	</div>
+
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/echarts.common.min.js"></script>
+	<script type="text/javascript" src="../js/roma.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript">
+		function picHide(obj) {
+			$(obj).attr("src","../images/tankuang.png");
+		}
+
+		function picshow(obj) {
+			$(obj).attr("src","../images/honghe_pic.jpg");
+		}
+
+	</script>
+
+	<script type="text/javascript">
+		window.onload = function () {
+			var oBtnLeft = document.getElementById("goleft");
+			var oBtnRight = document.getElementById("goright");
+			var oDiv = document.getElementById("indexmaindiv");
+			var oDiv1 = document.getElementById("maindiv1");
+			var oUl = oDiv.getElementsByTagName("ul")[0];
+			var aLi = oUl.getElementsByTagName("li");
+			var now = -5 * (aLi[0].offsetWidth + 13);
+			oUl.style.width = aLi.length * (aLi[0].offsetWidth + 13) + 'px';
+			oBtnRight.onclick = function () {
+				var n = Math.floor((aLi.length * (aLi[0].offsetWidth + 13) + oUl.offsetLeft) / aLi[0].offsetWidth);
+
+				if (n <= 4) {
+					move(oUl, 'left', 0);
+				}
+				else {
+					move(oUl, 'left', oUl.offsetLeft + now);
+				}
+			}
+			oBtnLeft.onclick = function () {
+				var now1 = -Math.floor((aLi.length / 5)) * 5 * (aLi[0].offsetWidth + 13);
+
+				if (oUl.offsetLeft >= 0) {
+					move(oUl, 'left', now1);
+				}
+				else {
+					move(oUl, 'left', oUl.offsetLeft - now);
+				}
+			}
+			var timer = setInterval(oBtnRight.onclick, 4000);
+			oDiv.onmouseover = function () {
+				clearInterval(timer);
+			}
+			oDiv.onmouseout = function () {
+				timer = setInterval(oBtnRight.onclick, 4000);
+			}
+
+		};
+
+		function getStyle(obj, name) {
+			if (obj.currentStyle) {
+				return obj.currentStyle[name];
+			}
+			else {
+				return getComputedStyle(obj, false)[name];
+			}
+		}
+
+		function move(obj, attr, iTarget) {
+			clearInterval(obj.timer)
+			obj.timer = setInterval(function () {
+				var cur = 0;
+				if (attr == 'opacity') {
+					cur = Math.round(parseFloat(getStyle(obj, attr)) * 100);
+				}
+				else {
+					cur = parseInt(getStyle(obj, attr));
+				}
+				var speed = (iTarget - cur) / 6;
+				speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+				if (iTarget == cur) {
+					clearInterval(obj.timer);
+				}
+				else if (attr == 'opacity') {
+					obj.style.filter = 'alpha(opacity:' + (cur + speed) + ')';
+					obj.style.opacity = (cur + speed) / 100;
+				}
+				else {
+					obj.style[attr] = cur + speed + 'px';
+				}
+			}, 30);
+		}  
+	</script>
+</body>
+</html>
